@@ -1,0 +1,6 @@
+<view class="input-box">
+    <textarea name="{{name}}" placeholder="{{placeholder}}" value="{{value}}" bindinput="updateData" />
+    <view class="button" hover-class="button-hover" bindtouchstart="startGetVoice" bindtouchend="endGetVoice">
+        <text>按住说话</text>
+    </view>
+</view>

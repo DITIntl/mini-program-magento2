@@ -1,0 +1,170 @@
+page {
+    background: #f1f8e9;
+}
+
+.header {
+    padding: 20rpx;
+}
+
+.header .info {
+    float: left;
+}
+
+.header .info .img {
+    float: left;
+}
+
+.header .info .img image {
+    background: #efefef;
+    border-radius: 10rpx;
+    height: 100rpx;
+    width: 100rpx;
+}
+
+.header .info-details {
+    background: #f1f8e9;
+    flex-wrap: wrap;
+    display: none;
+    width: 100%;
+}
+
+.header .info-details.active {
+    display: flex;
+}
+
+.header .info-details .field {
+    padding: 10rpx;
+    width: 50%;
+}
+
+.header .actions {
+    float: right;
+}
+
+.header .actions button {
+    float: left;
+    margin: 0 0 0 10rpx;
+}
+
+.header .actions button span {
+    font-family: 'Icon Solid';
+}
+
+.header .actions button.btn-save span::after {
+    content: '\f0c7';
+}
+
+.header .actions button.btn-back span::after {
+    content: '\f2ea';
+}
+
+.header::after {
+    clear: both;
+    content: '';
+    display: table;
+    height: 0;
+}
+
+.section {
+    background: #fffde7;
+    color: #ff5722;
+    padding: 30rpx 20rpx;
+}
+
+.section-title {
+    font-size: 32rpx;
+}
+
+.section-content {
+    border-radius: 0 0 10rpx 10rpx;
+    height: 0;
+    overflow: hidden;
+}
+
+.section.active .section-content {
+    height: auto;
+    padding: 40rpx 0 20rpx;
+}
+
+.tool {
+    margin: 20rpx 0 0;
+}
+
+.tool:first-child {
+    margin: 0;
+}
+
+.tool-title {
+    background: #FFAB91;
+    border-radius: 10rpx;
+    color: #fff;
+    font-size: 30rpx;
+    padding: 12rpx 24rpx;
+}
+
+.tool-content {
+    border-radius: 0 0 10rpx 10rpx;
+    display: none;
+}
+
+.tool.active .tool-content {
+    display: block;
+    padding: 20rpx 10rpx 30rpx;
+}
+
+.tool-content .score {
+    margin: 30rpx 0 0;
+}
+
+.tool-content .score .item {
+    margin: 0 30rpx 0 0;
+}
+
+.tool-content .comment {
+    margin: 30rpx 0 0;
+}
+
+.tool-content .comment textarea {
+    color: #ff5722;
+}
+
+.action-title {
+    border-bottom: 1rpx solid #ff5722;
+    margin: 0 0 20rpx;
+    padding: 10rpx 0;
+}
+
+.action-title:last-child {
+    border: 0;
+}
+
+.action-content {
+    display: none;
+    margin: 20rpx 0;
+}
+
+.action.active .action-content {
+    display: block;
+}
+
+.action-content .step .num {
+    display: inline-block;
+    width: 40rpx;
+}
+
+.section:nth-child(2n) {
+    background: #f1f8e9;
+    color: #7cb342;
+}
+
+.section:nth-child(2n) .tool-title {
+    background: #9ccc65;
+}
+
+.section:nth-child(2n) .tool-content .comment textarea {
+    color: #7cb342;
+}
+
+.section:nth-child(2n) .action-title {
+    border-bottom: 1rpx solid #7cb342;
+}

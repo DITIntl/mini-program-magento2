@@ -1,0 +1,83 @@
+<view class="fullscreen">
+    <!--<camera device-position="back" mode="scanCode" flash="off" binderror="error" bindscancode="getCode">
+        <cover-view class="mask"></cover-view>
+    </camera>
+    <canvas canvas-id="camera-canvas">
+    </canvas>-->
+</view>
+
+<view class="section user-info">
+    <view class="avatar">
+        <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class="nickname">
+        Nick Name:
+        <open-data type="userNickName"></open-data>
+    </view>
+    <view>
+        Gender:
+        <open-data type="userGender" lang="zh_CN"></open-data>
+    </view>
+    <view class="location">
+        Location:
+        <open-data type="userCity"></open-data>
+        <open-data type="userProvince"></open-data>
+        <open-data type="userCountry"></open-data>
+    </view>
+    <view>
+        Language:
+        <open-data type="userLanguage"></open-data>
+    </view>
+</view>
+
+<view class="section">
+    <view class="title">Battery 电量</view>
+    <view>Level: {{battery.level}}</view>
+    <view>Is Charging: {{battery.isCharging}}</view>
+</view>
+
+<view class="section">
+    <view class="title">Location 位置</view>
+    <view>Latitude: {{location.latitude}}</view>
+    <view>Longitude: {{location.longitude}}</view>
+    <view>Speed: {{location.speed}}</view>
+    <view>Accuracy: {{location.accuracy}}</view>
+    <view>Altitude: {{location.altitude}}</view>
+    <view>Vertical Accuracy: {{location.verticalAccuracy}}</view>
+    <view>Horizontal Accuracy: {{location.horizontalAccuracy}}</view>
+</view>
+
+<view class="section">
+    <view class="title">Compass 罗盘</view>
+    <view>Direction: {{compass.direction}}</view>
+    <view>Accuracy: {{compass.accuracy}}</view>
+</view>
+
+<view class="section">
+    <view class="title">Device Motion 设备方向</view>
+    <view>Alpha: {{deviceMotion.alpha}}</view>
+    <view>Beta: {{deviceMotion.beta}}</view>
+    <view>Gamma: {{deviceMotion.gamma}}</view>
+</view>
+
+<view class="section">
+    <view class="title">Accelerometer 加速计</view>
+    <view>x: {{accelerometer.x}}</view>
+    <view>y: {{accelerometer.y}}</view>
+    <view>z: {{accelerometer.z}}</view>
+</view>
+
+<view class="section">
+    <view class="title">Gyroscope 陀螺仪</view>
+    <view>x: {{gyroscope.x}}</view>
+    <view>y: {{gyroscope.y}}</view>
+    <view>z: {{gyroscope.z}}</view>
+</view>
+
+<view class="section">
+    <view class="title">NFC 近场通信</view>
+    <view>errCode: {{hce.errCode}}</view>
+    <view>Message Type: {{nfc.messageType}}</view>
+    <view>Data: {{nfc.data}}</view>
+    <view>Reason: {{nfc.reason}}</view>
+</view>

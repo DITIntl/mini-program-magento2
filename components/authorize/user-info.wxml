@@ -1,0 +1,10 @@
+<block wx:if="{{show}}">
+    <view class="wrapper">
+        <view class="container" wx:if="{{canUse}}">
+            <button class="btn-auth" open-type="getUserInfo" bindgetuserinfo="onGetUserInfo">授权获取用户信息</button>
+        </view>
+        <view class="container" wx:else>
+            <view class="tip">请升级微信版本</view>
+        </view>
+    </view>
+</block>

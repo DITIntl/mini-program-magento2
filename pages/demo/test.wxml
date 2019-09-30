@@ -1,0 +1,9 @@
+<view class="wrapper">
+    <open-data type="userAvatarUrl" class="img" style="transform: rotateX( {{rotate.x}}deg ) rotateY( {{rotate.y}}deg ) rotateZ( {{rotate.z}}deg );"></open-data>
+</view>
+
+<view class="section">
+    <view>Alpha: {{deviceMotion.alpha}}</view>
+    <view>Beta: {{deviceMotion.beta}}</view>
+    <view>Gamma: {{deviceMotion.gamma}}</view>
+</view>

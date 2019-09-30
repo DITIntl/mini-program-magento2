@@ -1,0 +1,69 @@
+<form bindsubmit="saveRecord">
+    <view class="header-wrapper">
+        <view class="header">
+            <view class="info">
+                <view class="img" bindtap="toggleInfo">
+                    <image src="{{imageUrl}}/{{record.image}}" mode="aspectFill" />
+                </view>
+                <view class="name">{{record.name}}</view>
+            </view>
+            <view class="actions">
+                <button class="btn-back" bindtap="backToList">
+                    <span />
+                </button>
+                <button class="btn-save" form-type="submit">
+                    <span />
+                </button>
+            </view>
+            <view class="info-details {{showInfo ? 'active' : ''}}">
+                <view wx:for="{{fields}}" wx:key="unique" wx:for-index="idxField" wx:for-item="field" class="field">
+                    <view class="input-box">
+                        <input wx:if="{{field.type === 'text'}}" type="text" placeholder="{{field.title}}" name="{{field.name}}" value="{{record[field.name]}}" />
+                        <input wx:elif="{{field.type === 'number'}}" type="number" placeholder="{{field.title}}" name="{{field.name}}" value="{{record[field.name]}}" />
+                        <picker wx:elif="{{field.type === 'selector'}}" mode="selector" range="{{field.options}}" name="{{field.name}}" record-options="{{field.options}}" value="{{record[field.name]}}">{{record[field.name] || field.title}}</picker>
+                        <picker wx:else="{{field.type === 'date'}}" mode="date" name="{{field.name}}" value="{{record[field.name]}}">{{record[field.name] || field.title}}</picker>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="main-wrapper">
+        <view class="main">
+            <view wx:for="{{sections}}" wx:key="unique" wx:for-index="idxSection" wx:for-item="section" class="section {{currentSection === idxSection ? 'active' :  ''}}">
+                <view class="section-title" data-idx="{{idxSection}}" bindtap="changeSection">
+                    <text>{{section.name}}</text>
+                </view>
+                <view class="section-content">
+                    <view wx:for="{{section.tools}}" wx:key="unique" wx:for-index="idxTool" wx:for-item="tool" class="tool {{currentTool === idxTool ? 'active' : ''}}">
+                        <view class="tool-title" data-idx="{{idxTool}}" bindtap="changeTool">
+                            <text>{{tool.name}}</text>
+                        </view>
+                        <view class="tool-content">
+                            <view wx:for="{{tool.actions}}" wx:key="unique" wx:for-index="idxAction" wx:for-item="action" class="action {{currentAction === idxAction ? 'active' : ''}}">
+                                <block wx:if="{{action.name}}">
+                                    <view class="action-title" data-idx="{{idxAction}}" bindtap="changeAction">
+                                        <text>{{action.name}}</text>
+                                    </view>
+                                </block>
+                                <view class="action-content">
+                                    <view wx:for="{{action.steps}}" wx:key="unique" wx:for-index="idxStep" wx:for-item="step" class="step">
+                                        <text class="num">{{idxStep + 1}}、</text>
+                                        <text>{{step.name}}</text>
+                                    </view>
+                                </view>
+                            </view>
+                            <radio-group class="score" name="score[{{idxSection}}][{{idxTool}}]" record-options="{{tool.scores}}" bindchange="updaterecord">
+                                <label class="item" wx:for="{{tool.scores}}" wx:key="unique" wx:for-index="idxScore" wx:for-item="score">
+                                    <radio value="{{idxScore}}" checked="{{record['score'][idxSection][idxTool] + '' === idxScore + ''}}" /> {{score}}
+                                </label>
+                            </radio-group>
+                            <view class="comment">
+                                <voice-text name="comment[{{idxSection}}][{{idxTool}}]" value="{{record['comment'][idxSection][idxTool]}}" />
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</form>

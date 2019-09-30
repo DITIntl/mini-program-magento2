@@ -1,0 +1,35 @@
+.input-box {
+    background: #fff;
+    border: 1rpx solid #9CCC65;
+    border-radius: 10rpx;
+    height: 170rpx;
+    padding: 16rpx;
+}
+
+.input-box::after {
+    clear: both;
+    content: '';
+    display: block;
+    height: 0;
+}
+
+textarea {
+    float: left;
+    height: 100%;
+    width: calc( 100% - 120rpx );
+}
+
+.button {
+    background: #9CCC65;
+    border-radius: 10rpx;
+    color: #fff;
+    float: right;
+    height: 100%;
+    padding: 14rpx;
+    text-align: center;
+    width: 100rpx;
+}
+
+.button-hover {
+    background: #C5E1A5;
+}

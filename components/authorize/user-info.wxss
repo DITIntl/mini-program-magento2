@@ -1,0 +1,33 @@
+.wrapper {
+    display: block;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.wrapper::after {
+    background: #000;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: .6;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.container {
+    padding: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.btn-auth {
+    border: 0;
+    border-radius: 0;
+}

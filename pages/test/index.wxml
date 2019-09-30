@@ -1,0 +1,40 @@
+<view class="header-wrapper">
+    <view class="header">
+        <view class="search">
+            <form bindsubmit="updateList">
+                <view class="input-box">
+                    <input type="text" placeholder="搜索" name="filters[][name]" />
+                    <button class="btn-search" form-type="submit">
+                        <span />
+                    </button>
+                </view>
+            </form>
+        </view>
+        <view class="actions">
+            <view class="btn-add" bindtap="redirectCreate"></view>
+        </view>
+    </view>
+</view>
+<view class="main-wrapper">
+    <view class="main">
+        <view class="records">
+            <view wx:for="{{records}}" wx:key="unique" wx:for-index="recordId" wx:for-item="record" data-id="{{record.id}}" class="record" bindtap="redirectEdit">
+                <view class="img">
+                    <image src="{{imageUrl}}/{{record.image}}" mode="aspectFill" lazy-load="true" />
+                </view>
+                <view class="info">
+                    <view class="box">
+                        <view class="name">{{record.name}}</view>
+                        <view class="age">年龄：5年8个月</view>
+                    </view>
+                    <view class="date">2月20日</view>
+                </view>
+            </view>
+            <block wx:if="{{records.length === 0}}">
+                <view class="no-record">
+                    没有找到记录
+                </view>
+            </block>
+        </view>
+    </view>
+</view>

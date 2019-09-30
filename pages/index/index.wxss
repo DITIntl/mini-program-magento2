@@ -1,0 +1,45 @@
+Page {
+    background: #fff;
+}
+
+.fullscreen {
+    height: 100%;
+    position: fixed;
+    width: 100%;
+}
+
+camera {
+    height: 100%;
+    width: 100%;
+}
+
+canvas {
+    height: 100%;
+    width: 100%;
+}
+
+.section {
+    padding: 20rpx;
+}
+
+.section .title {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.user-info .avatar {
+    border-radius: 50%;
+    margin: 0 auto 20rpx;
+    overflow: hidden;
+    height: 200rpx;
+    width: 200rpx;
+}
+
+.user-info .avatar open-data {
+    display: block;
+    height: 100%;
+}
+
+.user-info .location open-data {
+    margin: 0 5rpx 0 0;
+}

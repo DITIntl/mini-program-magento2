@@ -1,0 +1,19 @@
+page {
+    background: #fff;
+}
+
+.wrapper {
+    margin: 300rpx auto 0;
+    perspective:150;
+    width: 300rpx;
+}
+
+.img {
+    display: block;
+    transform-origin: 50% 100%;
+}
+
+.section {
+    margin: 50rpx auto 0;
+    width: 300rpx;
+}

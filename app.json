@@ -1,0 +1,40 @@
+{
+    "pages": [
+        "pages/test/index",
+        "pages/test/edit",
+        "pages/demo/test",
+        "pages/index/index",
+        "pages/demo/index",
+        "pages/login/login"
+    ],
+    "usingComponents": {
+        "user-info": "components/authorize/user-info",
+        "voice-text": "components/voice/voice-text"
+    },
+    "plugins": {
+        "WechatSI": {
+            "version": "0.2.2",
+            "provider": "wx069ba97219f66d99"
+        }
+    },
+    "window": {
+        "backgroundColor": "#F1F8E9",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#F1F8E9",
+        "navigationBarTitleText": "杰奥 Baby 感统测评",
+        "navigationBarTextStyle": "black"
+    },
+    "networkTimeout": {
+        "request": 5000,
+        "connectSocket": 5000,
+        "uploadFile": 300000,
+        "downloadFile": 300000
+    },
+    "permission": {
+        "scope.userLocation": {
+            "desc": "你的位置信息将用于小程序位置接口的效果展示"
+        }
+    },
+    "resizable": false,
+    "debug": false
+}
